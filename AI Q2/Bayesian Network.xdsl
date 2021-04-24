@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="Network1" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="PERSONNEL">
+			<state id="T" />
+			<state id="F" />
+			<probabilities>0.8 0.2</probabilities>
+		</cpt>
+		<cpt id="SP">
+			<state id="T" />
+			<state id="F" />
+			<parents>PERSONNEL</parents>
+			<probabilities>0.7 0.3 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="ST">
+			<state id="T" />
+			<state id="F" />
+			<parents>PERSONNEL</parents>
+			<probabilities>0.6 0.4 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SPEED">
+			<state id="T" />
+			<state id="F" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="FC">
+			<state id="T" />
+			<state id="F" />
+			<parents>PERSONNEL SPEED</parents>
+			<probabilities>0.4 0.6 0.2 0.8 0.2 0.8 0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="OT">
+			<state id="T" />
+			<state id="F" />
+			<parents>ST FC SPEED</parents>
+			<probabilities>0.1 0.9 0.1 0.9 0.7 0.3 0.3 0.7 0.1 0.9 0.1 0.9 0.7 0.3 0.5 0.5</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 3.0.6128.0 ACADEMIC" name="Network1">
+			<node id="PERSONNEL">
+				<name>PERSONNEL</name>
+				<interior color="000000" />
+				<outline color="ffffff" width="2" />
+				<font color="ffffff" name="Britannic Bold" size="11" />
+				<position>248 95 407 166</position>
+				<barchart active="true" />
+			</node>
+			<node id="SP">
+				<name>SP</name>
+				<interior color="800000" />
+				<outline color="ffffff" width="2" />
+				<font color="ffffff" name="Britannic Bold" size="11" />
+				<position>74 267 240 334</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="ST">
+				<name>ST</name>
+				<interior color="800000" />
+				<outline color="ffffff" width="2" />
+				<font color="ffffff" name="Britannic Bold" size="11" />
+				<position>265 265 386 338</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="FC">
+				<name>FC</name>
+				<interior color="800000" />
+				<outline color="ffffff" width="2" />
+				<font color="ffffff" name="Britannic Bold" size="11" />
+				<position>438 262 551 332</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="OT">
+				<name>OT</name>
+				<interior color="333333" />
+				<outline color="ffffff" width="2" />
+				<font color="ffffff" name="Britannic Bold" size="11" />
+				<position>439 455 552 533</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="SPEED">
+				<name>SPEED</name>
+				<interior color="999999" />
+				<outline color="000000" />
+				<font color="000000" name="Britannic Bold" size="10" />
+				<position>627 266 760 327</position>
+				<barchart active="true" />
+			</node>
+		</genie>
+	</extensions>
+</smile>
